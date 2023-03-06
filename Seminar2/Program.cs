@@ -21,6 +21,7 @@ Console.WriteLine($"New version of {randNumber} is {newNumber}");
 //        return num % div1 == 0 && num % div2 == 0;
 // }
 
+/*
 bool IsMultiplyed(int num, int div1, int div2)
 {
     if(num % div1 == 0 && num % div2 == 0)
@@ -42,3 +43,91 @@ if(result)
     Console.WriteLine($"Your number {number} is divisible by the {divider1} and {divider2}");
 else
     Console.WriteLine($"Your number {number} is not divisible by the {divider1} and {divider2}");
+*/
+
+// Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
+
+/*
+int BiggestNum(int num)
+{
+    int tens = num / 10;
+    int units = num % 10;
+    if (units > tens)
+        return units;
+    else
+        return tens;
+}
+int randNumber = new Random().Next(10, 100);
+int big = BiggestNum(randNumber);
+Console.WriteLine($"The biggest sign of number {randNumber} is {big}");
+*/
+
+// Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
+
+/*
+bool SquareOrNot(int num1, int num2)
+{
+    return (num1 / num2 == num2 || num2 / num1 == num1);
+}
+Console.Write("Please insert first number: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Please insert second number: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+
+bool result = SquareOrNot(num1, num2);
+if(result)
+    Console.WriteLine($"Number {num1} or number {num2} is a square of the other number");
+else
+    Console.WriteLine($"Number {num1} or number {num2} is not a square of the other number");
+*/
+
+// HOMEWORK
+
+// Task 10.
+// Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
+
+/*
+Console.Write("Input a three digit number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int secondDigit = (num / 10) % 10;
+
+Console.WriteLine($"Second digit of number {num} equals {secondDigit}");
+*/
+
+// Task 13. Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
+
+/*
+Console.Write("Input a number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int thirdDigit = (num / 100) % 10;
+
+if(thirdDigit != 0)
+    Console.WriteLine($"Third digit of number {num} equals {thirdDigit}");
+else
+    Console.WriteLine($"In number {num} there is no third digit");
+*/
+
+// Task 15. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+/*
+bool IsWeekend(int day)
+{
+    return (day == 6 || day == 7);
+}
+Console.Write("Enter the number of the day of the week: ");
+int day = Convert.ToInt32(Console.ReadLine());
+
+if (IsWeekend(day))
+    Console.WriteLine("This day is a weekend");
+else
+    Console.WriteLine("This day is not a weekend");
+*/
